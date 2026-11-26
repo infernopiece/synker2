@@ -1,8 +1,8 @@
 // =====================================================
 // CONFIGURATION - Gets from config.js
 // =====================================================
-const DEFAULT_WISP = window.SITE_CONFIG?.defaultWisp ?? "wss://wisp.playub.net/";
-const WISP_SERVERS = [{ name: "UBNet", url: "wss://wisp.playub.net/" }];
+const DEFAULT_WISP = window.SITE_CONFIG?.defaultWisp ?? "wss://wisp.classroom.lat";
+const WISP_SERVERS = [{ name: "Default", url: "wss://wisp.classroom.lat" }];
 
 // Initialize default proxy server if not set
 if (!localStorage.getItem("proxServer")) {
