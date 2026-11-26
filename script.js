@@ -1,8 +1,8 @@
 // =====================================================
 // CONFIGURATION - Gets from config.js
 // =====================================================
-const DEFAULT_WISP = window.SITE_CONFIG?.defaultWisp ?? "wss://wisp.synker.app/";
-const WISP_SERVERS = [{ name: "Synker", url: "wss://wisp.synker.app/" }];
+const DEFAULT_WISP = window.SITE_CONFIG?.defaultWisp ?? "wss://wisp.playub.net/";
+const WISP_SERVERS = [{ name: "UBNet", url: "wss://wisp.playub.net/" }];
 
 // Initialize default proxy server if not set
 if (!localStorage.getItem("proxServer")) {
