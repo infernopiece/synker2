@@ -1,8 +1,8 @@
 // =====================================================
 // CONFIGURATION - Gets from config.js
 // =====================================================
-const DEFAULT_WISP = window.SITE_CONFIG?.defaultWisp ?? "wss://wisp.classroom.lat";
-const WISP_SERVERS = [{ name: "Default", url: "wss://wisp.classroom.lat" }];
+const DEFAULT_WISP = window.SITE_CONFIG?.defaultWisp ?? "wss://bikesense.org/wisp/";
+const WISP_SERVERS = [{ name: "Default", url: "wss://bikesense.org/wisp/" }];
 
 // Initialize default proxy server if not set
 if (!localStorage.getItem("proxServer")) {
