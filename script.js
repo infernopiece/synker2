@@ -1,8 +1,8 @@
 // =====================================================
 // CONFIGURATION - Gets from config.js
 // =====================================================
-const DEFAULT_WISP = window.SITE_CONFIG?.defaultWisp ?? "wss://glseries.net/wisp/";
-const WISP_SERVERS = [{ name: "GLSeries", url: "wss://glseries.net/wisp/" }];
+const DEFAULT_WISP = window.SITE_CONFIG?.defaultWisp ?? "wss://wisp.synker.app/";
+const WISP_SERVERS = [{ name: "Synker", url: "wss://wisp.synker.app/" }];
 
 // Initialize default proxy server if not set
 if (!localStorage.getItem("proxServer")) {
@@ -148,9 +148,9 @@ async function getSharedScramjet() {
     sharedScramjet = new ScramjetController({
         prefix: basePath + "scramjet/",
         files: {
-            wasm: "https://cdn.jsdelivr.net/gh/Destroyed12121/Staticsj@main/JS/scramjet.wasm.wasm",
-            all: "https://cdn.jsdelivr.net/gh/Destroyed12121/Staticsj@main/JS/scramjet.all.js",
-            sync: "https://cdn.jsdelivr.net/gh/Destroyed12121/Staticsj@main/JS/scramjet.sync.js"
+            wasm: "https://delivr.jamjambro2121.workers.dev/gh/Destroyed12121/Staticsj@main/JS/scramjet.wasm.wasm",
+            all: "https://delivr.jamjambro2121.workers.dev/gh/Destroyed12121/Staticsj@main/JS/scramjet.all.js",
+            sync: "https://delivr.jamjambro2121.workers.dev/gh/Destroyed12121/Staticsj@main/JS/scramjet.sync.js"
         }
     });
     
@@ -191,7 +191,7 @@ async function getSharedConnection() {
     
     sharedConnection = new BareMux.BareMuxConnection(basePath + "bareworker.js");
     await sharedConnection.setTransport(
-        "https://cdn.jsdelivr.net/npm/@mercuryworkshop/epoxy-transport@2.1.28/dist/index.mjs",
+        "https://delivr.jamjambro2121.workers.dev/npm/@mercuryworkshop/epoxy-transport@2.1.28/dist/index.mjs",
         [{ wisp: wispUrl }]
     );
     sharedConnectionReady = true;
@@ -652,7 +652,7 @@ function toggleDevTools() {
         return;
     }
     const script = win.document.createElement('script');
-    script.src = "https://cdn.jsdelivr.net/npm/eruda";
+    script.src = "https://delivr.jamjambro2121.workers.dev/npm/eruda";
     script.onload = () => { win.eruda.init(); win.eruda.show(); };
     win.document.body.appendChild(script);
 }
